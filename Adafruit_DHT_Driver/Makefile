@@ -6,5 +6,5 @@ OBJ = Adafruit_DHT.o
 %.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-Adafruit_DHT: $(OBJ)
+temp: $(OBJ)
 	gcc -o $@ $^ $(CFLAGS)
