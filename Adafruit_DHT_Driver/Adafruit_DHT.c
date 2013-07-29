@@ -27,10 +27,6 @@
 
 #define MAXTIMINGS 100
 
-//#define DEBUG
-
-#define DHT22 22
-
 int readDHT(int type, int pin);
 
 int main(int argc, char **argv)
@@ -115,7 +111,8 @@ int readDHT(int type, int pin) {
 	f = (data[2] & 0x7F)* 256 + data[3];
         f /= 10.0;
         if (data[2] & 0x80)  f *= -1;
-	printf("Temp =  %.1f *C, Hum = %.1f \%\n", f, h);
+	printf("%.1f\n", f);
+	printf("%.1f\n", h);
     return 1;
   }
 
